@@ -30,7 +30,7 @@ client.on('message', message => {
       .addField('??| Online',
       `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
       .addField('??| DND',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)
-      .addField('??| Idle',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`)
+      .addField('??| Idle',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`
       .addField('??| Offline',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
       .addField('?| Server Members',`${message.guild.memberCount}`)
       message.channel.send(IzRo);
