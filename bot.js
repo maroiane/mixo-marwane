@@ -586,23 +586,6 @@ client.on("message", message => {
     });
   }
 });
-    const gif = require("gif-search")
-client.on('message', message => {
-    if(message.content.startsWith('*gif')) {
-console.log('[Gif Search] Developed By Ghost')
-        if(message.channel.type === 'dm') return message.channel.send('Only For Servers')
-        let args = message.content.split(' ').slice(1).join(' ')
-            if (!args) return message.reply('يجب كتابة أسم الصورة')
-    gif.query(args).then(gifUrl => {
-        message.channel.send({
-            files: [{
-                attachment: gifUrl,
-                name: "search.gif"
-            }]
-        });
-    });
-} 
-});
   client.on('message', ReBeeL => {
   var prefix = "*";
     if(ReBeeL.author.bot) return;
